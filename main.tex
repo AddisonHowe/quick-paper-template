@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{main}
+
+\presetkeys{todonotes}{disable}{}  % comment to disable todonotes
+\graphicspath{{images/}}
+\addbibresource{references.bib}
+
+%--------------------------------------------------------------
+%  document information
+
+\title{Title}
+\author{Addison Howe}
+\date{Month, Year}
+\available{https://github.com/AddisonHowe/quick-paper-template}
+\hypersetup{pdftitle={Paper Title}}
+
+%--------------------------------------------------------------
+%  title page with abstract
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+
+\lipsum[1]
+
+\end{titlepage}
+
+%--------------------------------------------------------------
+%  main body sections
+
+\section{Introduction}\label{s:introduction}
+\paragraph{The introduction} \lipsum[2]
+
+\section{Results}\label{s:results}
+\paragraph{The results} \lipsum[3]
+
+\section{Discussion}\label{s:discussion}
+\paragraph{The discussion} \lipsum[4]
+
+\section{Conclusion}\label{s:conclusion}
+\paragraph{The conclusion} \lipsum[5]
+
+%--------------------------------------------------------------
+%  template examples
+
+\section{Template Examples}\label{s:examples}
+
+These examples come primarily from \url{https://github.com/pmichaillat/latex-paper}.
+
+\subsection{Citations and references}
+
+Some citations to \citep{placeholder-ref1} and \citep{placeholder-ref2}, as well as a reference to Figure \ref{fig:label1a}.
+
+\subsection{Theorems and proofs}
+
+\begin{proposition}\label{prop:example1}  
+    Lorem ipsum dolor sit amet $z \subset \mathbb{R}$, consectetur adipiscing elit
+    \begin{equation}\label{eq:example1}
+        S_{k_x}(z) \approx \frac{S(z)^x}{k / 23 -\zeta\gamma [45- S(z)] + \ln(y) - j^2+x(l)}.
+    \end{equation}
+    Ut enim ad minim veniam, sunt in culpa qui officia deserunt mollit anim id est laborum:
+    \begin{equation}\label{eq:example1steps}
+        \sum_{j=0}^{+\infty}\mathcal{S}^j(z^{\ast}) = S(z) \times \mathbb{E}(N(z)) + \alpha \beta - \left[\sum_{i=0}^{+\infty}\mathcal{F}^{i}-\exp(\lambda \mu)\right].
+    \end{equation}
+\end{proposition}
+\begin{proof} 
+    There is a simple proof to this result. It gives equation \eqref{eq:example1steps}.
+\end{proof} 
+
+\subsection{Tables}
+
+\begin{table}[t]
+    \caption{Caption for the table}
+    \begin{tabular*}{\textwidth}[]{p{3.3cm}@{\extracolsep\fill}cccc}
+    \toprule
+    & Timeline & Natural rate & Monetary  & Government \\
+    &  & of interest &  policy & spending\\
+    \midrule
+    \multicolumn{5}{l}{A. Qui dolorem eum fugiat}\\
+    ZLB: & $t\in (0,T) $ & $r^n<0$ & $i=0$  & -- \\
+    Normal times: & $t>T$ &  $r^n>0$ & $i= r^n + \phi \pi$  & --   \\
+    \midrule
+    \multicolumn{5}{l}{B. Nam libero tempore, cum soluta nobis}\\
+    ZLB: & $t\in (0,T)$ & $r^n<0$ & $i=0$  & -- \\
+    Forward guidance: & $t\in (T,T+\Delta)$ & $r^n>0$ & $i=0$  & --\\
+    Normal times: & $t>T+\Delta$ & $r^n>0$ & $i= r^n + \phi \pi$  & -- \\
+    \midrule
+    \multicolumn{5}{l}{C. At vero eos et accusamus}\\
+    ZLB: & $t\in (0,T) $ & $r^n<0$ & $i=0$  & $g>0$  \\
+    Normal times: & $t>T$ & $r^n>0$ & $i= r^n + \phi \pi$  & $g=0$   \\
+    \bottomrule
+    \end{tabular*}
+    \note{Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat \citep[table 1]{placeholder-ref1}.}
+\label{t:table}\end{table}
+
+\subsection{Figures}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=\textwidth]{images/placeholder.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Multipanel figures}
+A full page, multipanel figure follows.
+
+\begin{figure}[p]
+    \subcaptionbox{Caption for panel\label{fig:label1a}}{\includegraphics[scale=\sfig]{images/placeholder.png}}\hfill
+    \subcaptionbox{Caption for panel\label{fig:label1b}}{\includegraphics[scale=\sfig]{images/placeholder.png}}\vfig
+    \subcaptionbox{Caption for panel\label{fig:label1c}}{\includegraphics[scale=\sfig]{images/placeholder.png}}\hfill
+    \subcaptionbox{Caption for panel\label{fig:label1d}}{\includegraphics[scale=\sfig]{images/placeholder.png}}
+    \caption{Caption for the graph}
+    \note{Note for the graph. \lipsum[1]}
+    \label{fig:label1}
+\end{figure}
+
+%--------------------------------------------------------------
+%  references
+
+\newpage
+\printbibliography
+
+%--------------------------------------------------------------
+%  appendix
+
+\newpage
+\appendix
+\section{Appendix title}\label{a:appendix1}
+
+Reference main body section~\ref{s:examples}. 
+
+%--------------------------------------------------------------
+\end{document}
